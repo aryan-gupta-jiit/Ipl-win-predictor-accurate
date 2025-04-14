@@ -1,0 +1,38 @@
+# Ignore virtual environment folder
+.venv/
+
+# Ignore PyCharm IDE settings
+.idea/
+
+# Bytecode cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore logs and local settings
+*.log
+*.local
+
+# Ignore OS and system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python environment and packaging files
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.env
+.venv
+ENV/
+env/
+
+# Jupyter Notebook cache (if used)
+.ipynb_checkpoints/
+
+# Ignore Heroku/PaaS local runtime config if not needed
+*.pid
+
+# Python virtualenv config file (optional)
+pyvenv.cfg

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPL Win Predictor</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container prata-regular">
+    <h1 class="prata-regular">IPL Win Predictor</h1>
+
+    <div class="flex-container">
+
+    <form id="predictionForm">
+
+    <label>Batting Team:</label>
+<select id="batting_team" required>
+  {% for team in teams %}
+    <option value="{{ team }}">{{ team }}</option>
+  {% endfor %}
+</select>
+
+<label>Bowling Team:</label>
+<select id="bowling_team" required>
+  {% for team in teams %}
+    <option value="{{ team }}">{{ team }}</option>
+  {% endfor %}
+</select>
+
+<label>City:</label>
+<select id="city" required>
+  {% for city in cities %}
+    <option value="{{ city }}">{{ city }}</option>
+  {% endfor %}
+</select>
+
+<label>Target Score:</label>
+<input type="number" id="target" min="0" required>
+
+<label>Current Score:</label>
+<input type="number" id="score" min="0" required>
+
+<label>Overs Completed:</label>
+<input type="number" step="0.1" id="overs" min="0" max="20" required>
+<small id="oversError" style="color: red; display: none;">
+  Invalid overs. Please enter a valid value (e.g. 4.0, 10.3, 19.5).
+</small>
+
+<label>Wickets Lost:</label>
+<input type="number" id="wickets" max="10" min="0" required>
+
+    <button type="submit" class="prata-regular">Predict ( More Precise less Accurate )</button>
+  <div id="result_lr"></div>
+
+  <button type="submit" onclick="predict_rfc()" class="prata-regular">Predict ( Less Precise more Accurate )</button>
+  <div id="result_rfc"></div>
+
+    </form>
+      <div class="left">
+        <div id="chartContainer" style="width: 300px; margin: 20px auto;"></div>
+        <img src="{{ url_for('static', filename='virat_kohli_1.jpeg') }}" class="vk-img">
+      </div>
+      </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

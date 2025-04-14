@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+body {
+    font-family: "Outfit", sans-serif;
+    padding: 2rem;
+    background: #006A71;
+}
+.container {
+    background: #48A6A7;
+    padding: 2rem;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 8px;
+    height:100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.flex-container{
+display:flex;
+flex-direction:row;
+justify-content:space-evenly;
+}
+
+.left{
+    display:flex;
+    flex-direction:column;
+    margin-left:3px;
+}
+label, select, input {
+    display: block;
+    width: 80%;
+    margin-top: 1rem;
+    padding:4%;
+    font-family: "Prata", serif;
+}
+#predictionForm{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+button {
+    margin: 2rem auto;
+    padding: 0.8rem;
+    width: 90%;
+    background: #9ACBD0;
+    color: black;
+    border: 1px solid #006A71;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor:pointer;
+
+}
+#result h3 {
+    margin-top: 1rem;
+    color: #333;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.vk-img {
+  width: 250px;
+  display: block;
+  margin:auto;
+  border-radius: 10px;
+}
+
