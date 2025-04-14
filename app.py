@@ -21,7 +21,7 @@ cities = ['Bangalore', 'Chandigarh', 'Delhi', 'Kolkata', 'Jaipur',
 
 @app.route('/')
 def index():
-    return render_template('index.html',teams=sorted(teams),cities=sorted(cities))
+    return render_template('index.html',teams=sorted(teams, reverse=True),cities=sorted(cities))
 
 @app.route('/predict-lr',methods=['POST'])
 def predict_lr():
