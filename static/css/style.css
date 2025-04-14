@@ -5,6 +5,19 @@ body {
     padding: 2rem;
     background: #006A71;
 }
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer{
+    display: block;
+    width: 50%;
+    margin-top: 1rem;
+    background-color: #9ACBD0;
+    font-weight: bolder;
+    text-align: center;
+}
 .container {
     background: #48A6A7;
     padding: 2rem;
@@ -53,6 +66,7 @@ button {
 #result h3 {
     margin-top: 1rem;
     color: #333;
+    font-family: "Prata", serif;
 }
 
 .prata-regular {
